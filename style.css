@@ -5,6 +5,18 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+/* utility classes */
+.flow-content * + * {
+  margin-top: 1rem;
+}
+
 /* general styling */
 body {
   font-family: "PT sans", sans-serif;
@@ -13,8 +25,14 @@ body {
   margin-top: 6rem;
 }
 
+h1 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
 .hero {
   background-image: url(./assets/images/hero.jpg);
+  background-position-x: center;
   background-size: cover;
   padding: 10rem 0px;
 }
@@ -29,11 +47,17 @@ body {
   margin-bottom: 10rem;
 }
 
-.button {
+.btn {
   text-decoration: none;
   text-transform: uppercase;
   padding: 1rem 4rem;
   background-color: aquamarine;
   color: black;
   margin-top: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero__content {
+    max-width: 400px;
+  }
 }
